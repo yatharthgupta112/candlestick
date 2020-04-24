@@ -1,15 +1,15 @@
 const parse = require('csv-parse')
 const createObjectCsvWriter = require('csv-writer').createObjectCsvWriter
 
+/**
+*  convert csv to object  
+* @param {*} data
+ */
 async function getDataCSV(data)
 {
     return new Promise ((resolve,reject)=>{
-        // console.log(data)
         parse(data, {
-            // comment  : "#",
-            // delimiter: '/n',
             columns : true,
-            // objname : "row"
         },
         (err,data)=>{
             if(err)
@@ -20,6 +20,12 @@ async function getDataCSV(data)
     })
 }
 
+
+/**
+ * create csv file from array of objects  
+ * @param {*} data
+ *
+ */
 async function createCSV(data)
 {
     const csvwriter= createObjectCsvWriter({
@@ -34,7 +40,6 @@ async function createCSV(data)
     })
     
     return csvwriter.writeRecords(data)
-    // return temp
 }
 
 

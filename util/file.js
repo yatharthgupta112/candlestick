@@ -1,5 +1,9 @@
 const fs = require('fs')
 
+/**
+ * read the file from base directory
+ * @param {*} path 
+ */ 
 async function getFile (path)
 {
     return new Promise ((resolve, reject)=>{
@@ -11,8 +15,6 @@ async function getFile (path)
         });
     })
 }
-
-// async function 
 
 
 module.exports = {getFile};
