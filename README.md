@@ -1,4 +1,4 @@
 # candlestick
-#usage 
-#git clone https://github.com/yatharthgupta112/candlestick.git
-#npm start
+usage 
+-git clone https://github.com/yatharthgupta112/candlestick.git
+-npm start
